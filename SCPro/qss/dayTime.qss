@@ -1,0 +1,54 @@
+/* 白天模式样式表 */
+/*checkbox样式*/
+QCheckBox::indicator{
+width:35px;
+height:35px;
+}
+QCheckBox::indicator:checked{
+image:url(:/image/checked.png);
+}
+QCheckBox::indicator:unchecked{
+image:url(:/image/unchecked.png);
+}
+QComboBox{
+text-align:center;
+}
+/*选项卡样式表*/
+QTabBar::tab{
+height:38px;
+width:170;
+font-size:15px;
+font-family:微软雅黑;
+}
+/*时间源样式表*/
+QFrame[timeStatus="0"]{
+border:2px solid #939393;
+border-radius:7px;
+
+}
+QFrame[timeStatus="1"]{
+border:2px solid #000000;
+border-radius:7px;
+
+}
+QFrame[timeStatus="2"]{
+border:2px solid #000080;
+border-radius:7px;
+
+}
+QLabel[timeStatus="0"]{
+border:0px;
+background-color: #939393;
+}
+QLabel[timeStatus="1"]{
+border:0px;
+background-color: #000000;
+}
+QLabel[timeStatus="2"]{
+border:0px;
+background-color: #000080;
+}
+QLabel[itemType="timeSource"]{
+border:0px;
+color:#000080;
+}
