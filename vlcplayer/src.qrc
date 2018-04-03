@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icos/movie.png</file>
+        <file>icos/net.png</file>
+        <file>icos/pause.ico</file>
+        <file>icos/stop.ico</file>
+        <file>icos/play.ico</file>
+        <file>icos/error.ico</file>
+        <file>icos/mediaplayer.ico</file>
+    </qresource>
+</RCC>
