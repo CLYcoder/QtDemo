@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>板卡配置用户登录界面</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script language="javascript" src="portconfig.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <br><br>
+    <h2>串口转以太网设备配置界面</h2>
+    <!--网络参数设置列表-->
+
+    <table align="center" id="nettable">
+        <!--列表表头元素-->
+        <caption id="netcfg">网络信息设置</caption>
+        <tr class="table_header">
+            <th width="20%">网络端口</th>
+            <th width="22%">IP地址</th>
+            <th width="22%">子网掩码</th>
+            <th width="22%">组播IP</th>
+            <th width="14%">组播端口</th>
+        </tr>
+        <tr class="eve_line" id="net1_line">
+            <th class="netnum">net1 (eth0)</th>
+            <td>
+                <input type="text" id="net1_ip" style="text-align:center;" class="ipaddress" autocomplete="off" />
+            </td>
+            <td>
+                <input type="text" id="net1_mask" style="text-align:center;" class="ipaddress" autocomplete="off" />
+            </td>
+            <td>
+                <input type="text" id="net1_destip" style="text-align:center;" class="ipaddress" autocomplete="off" />
+            </td>
+            <td>
+                <input type="text" id="net1_destport" style="text-align:center;" class="portaddress" autocomplete="off" />
+            </td>
+        </tr>
+        <tr class="odd_line" id="net2_line">
+            <th class="netnum">net2 (eth1)</th>
+            <td>
+                <input type="text" id="net2_ip" style="text-align:center;" class="ipaddress" autocomplete="off" />
+            </td>
+            <td>
+                <input type="text" id="net2_mask" style="text-align:center;" class="ipaddress" autocomplete="off" />
+            </td>
+            <td>
+                <input type="text" id="net2_destip" style="text-align:center;" class="ipaddress" autocomplete="off" />
+            </td>
+            <td>
+                <input type="text" id="net2_destport" style="text-align:center;" class="portaddress" autocomplete="off" />
+            </td>
+        </tr>
+        <!--列表表头元素-->
+    </table>
+    <br>
+    <table align="center" id="porttable">
+        <!--列表标题-->
+        <caption id="portcfg">串口信息设置</caption>
+        <!--列表表头元素-->
+        <tr class="table_header">
+            <th width="20%">端口号</th>
+            <th width="18%">波特率</th>
+            <th width="16%">校验位</th>
+            <th width="9%">数据位</th>
+            <th width="9%">停止位</th>
+            <th width="14%">数据类型</th>
+            <th width="14%">保存数据</th>
+        </tr>
+        <!--COM1元素-->
+        <tr class="eve_line" id="com1_line" isDisable="0">
+            <th class="comnumber">COM1</th>
+            <td>
+                <select class="baud" id="com1_baud" style="text-align:center;" >
+                    <option>2400</option>
+                    <option>4800</option>
+                    <option>9600</option>
+                    <option>19200</option>
+                    <option>38400</option>
+                    <option>57600</option>
+                    <option>115200</option>
+                </select>
+            </td>
+            <td>
+                <select class="parity" id="com1_parity" >
+                    <option>none</option>
+                    <option>even</option>
+                    <option>odd</option>
+                </select>
+            </td>
+            <td>
+                <select class="databit" id="com1_databit" >
+                    <option>8</option>
+                    <option>7</option>
+                    <option>6</option>
+                    <option>5</option>
+                </select>
+            </td>
+            <td>
+                <select class="stopbit" id="com1_stopbit" >
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+            </td>
+            <td>
+                <input type="text" value="not use" id="com1_msgtype" class="msgtype"  />
+            </td>
+            <td>
+                <input type="checkbox" id="com1_checked" class="isused" onclick="onCheckedChanged('com1')" />
+            </td>
+        </tr>
+        <!--COM2元素-->
+        <tr class="odd_line" id="com2_line" isDisable="0">
+            <th class="comnumber">COM2</th>
+            <td>
+                <select class="baud" id="com2_baud" style="text-align:center;" >
+                        <option>2400</option>
+                        <option>4800</option>
+                        <option>9600</option>
+                        <option>19200</option>
+                        <option>38400</option>
+                        <option>57600</option>
+                        <option>115200</option>
+                    </select>
+            </td>
+            <td>
+                <select class="parity" id="com2_parity" >
+                        <option>none</option>
+                        <option>even</option>
+                        <option>odd</option>
+                    </select>
+            </td>
+            <td>
+                <select class="databit" id="com2_databit" >
+                        <option>8</option>
+                        <option>7</option>
+                        <option>6</option>
+                        <option>5</option>
+                    </select>
+            </td>
+            <td>
+                <select class="stopbit" id="com2_stopbit" >
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+            </td>
+
+            <td>
+                <input type="text" value="not use" id="com2_msgtype" class="msgtype"  />
+            </td>
+            <td>
+                <input type="checkbox" id="com2_checked" class="isused" onclick="onCheckedChanged('com2')" />
+            </td>
+        </tr>
+        <!--COM3元素-->
+        <tr class="eve_line" id="com3_line" isDisable="0">
+            <th class="comnumber">COM3</th>
+            <td>
+                <select class="baud" id="com3_baud" style="text-align:center;" >
+                        <option>2400</option>
+                        <option>4800</option>
+                        <option>9600</option>
+                        <option>19200</option>
+                        <option>38400</option>
+                        <option>57600</option>
+                        <option>115200</option>
+                    </select>
+            </td>
+            <td>
+                <select class="parity" id="com3_parity" >
+                        <option>none</option>
+                        <option>even</option>
+                        <option>odd</option>
+                    </select>
+            </td>
+            <td>
+                <select class="databit" id="com3_databit" >
+                        <option>8</option>
+                        <option>7</option>
+                        <option>6</option>
+                        <option>5</option>
+                    </select>
+            </td>
+            <td>
+                <select class="stopbit" id="com3_stopbit" >
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+            </td>
+            <td>
+                <input type="text" value="not use" id="com3_msgtype" class="msgtype"  />
+            </td>
+            <td>
+                <input type="checkbox" id="com3_checked" class="isused" onclick="onCheckedChanged('com3')" />
+            </td>
+        </tr>
+        <!--COM4元素-->
+        <tr class="odd_line" id="com4_line" isDisable="0">
+            <th class="comnumber">COM4</th>
+            <td>
+                <select class="baud" id="com4_baud" style="text-align:center;" >
+                            <option>2400</option>
+                            <option>4800</option>
+                            <option>9600</option>
+                            <option>19200</option>
+                            <option>38400</option>
+                            <option>57600</option>
+                            <option>115200</option>
+                        </select>
+            </td>
+            <td>
+                <select class="parity" id="com4_parity" >
+                            <option>none</option>
+                            <option>even</option>
+                            <option>odd</option>
+                        </select>
+            </td>
+            <td>
+                <select class="databit" id="com4_databit" >
+                            <option>8</option>
+                            <option>7</option>
+                            <option>6</option>
+                            <option>5</option>
+                        </select>
+            </td>
+            <td>
+                <select class="stopbit" id="com4_stopbit" >
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+            </td>
+
+            <td>
+                <input type="text" value="not use" id="com4_msgtype" class="msgtype"  />
+            </td>
+            <td>
+                <input type="checkbox" id="com4_checked" class="isused" onclick="onCheckedChanged('com4')" />
+            </td>
+        </tr>
+        <!--COM5元素-->
+        <tr class="eve_line" id="com5_line" isDisable="0">
+            <th class="comnumber">COM5</th>
+            <td>
+                <select class="baud" id="com5_baud" style="text-align:center;" >
+                        <option>2400</option>
+                        <option>4800</option>
+                        <option>9600</option>
+                        <option>19200</option>
+                        <option>38400</option>
+                        <option>57600</option>
+                        <option>115200</option>
+                    </select>
+            </td>
+            <td>
+                <select class="parity" id="com5_parity" >
+                        <option>none</option>
+                        <option>even</option>
+                        <option>odd</option>
+                        
+                    </select>
+            </td>
+            <td>
+                <select class="databit" id="com5_databit" >
+                        <option>8</option>
+                        <option>7</option>
+                        <option>6</option>
+                        <option>5</option>
+                    </select>
+            </td>
+            <td>
+                <select class="stopbit" id="com5_stopbit" >
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+            </td>
+            <td>
+                <input type="text" value="not use" id="com5_msgtype" class="msgtype"  />
+            </td>
+            <td>
+                <input type="checkbox" id="com5_checked" class="isused" onclick="onCheckedChanged('com5')" />
+            </td>
+        </tr>
+        <!--COM6元素-->
+        <tr class="odd_line" id="com6_line" isDisable="0">
+            <th class="comnumber">COM6</th>
+            <td>
+                <select class="baud" id="com6_baud" style="text-align:center;" >
+                            <option>2400</option>
+                            <option>4800</option>
+                            <option>9600</option>
+                            <option>19200</option>
+                            <option>38400</option>
+                            <option>57600</option>
+                            <option>115200</option>
+                        </select>
+            </td>
+            <td>
+                <select class="parity" id="com6_parity" >
+                            <option>none</option>
+                            <option>even</option>
+                            <option>odd</option>
+                        </select>
+            </td>
+            <td>
+                <select class="databit" id="com6_databit" >
+                            <option>8</option>
+                            <option>7</option>
+                            <option>6</option>
+                            <option>5</option>
+                        </select>
+            </td>
+            <td>
+                <select class="stopbit" id="com6_stopbit" >
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+            </td>
+
+            <td>
+                <input type="text" value="not use" id="com6_msgtype" class="msgtype"  />
+            </td>
+            <td>
+                <input type="checkbox" id="com6_checked" class="isused" onclick="onCheckedChanged('com6')" />
+            </td>
+        </tr>
+        <!--COM7元素-->
+        <tr class="eve_line" id="com7_line" isDisable="0">
+            <th class="comnumber">COM7</th>
+            <td>
+                <select class="baud" id="com7_baud" style="text-align:center;" >
+                        <option>2400</option>
+                        <option>4800</option>
+                        <option>9600</option>
+                        <option>19200</option>
+                        <option>38400</option>
+                        <option>57600</option>
+                        <option>115200</option>
+                    </select>
+            </td>
+            <td>
+                <select class="parity" id="com7_parity" >
+                        <option>none</option>
+                        <option>even</option>
+                        <option>odd</option>
+                    </select>
+            </td>
+            <td>
+                <select class="databit" id="com7_databit" >
+                        <option>8</option>
+                        <option>7</option>
+                        <option>6</option>
+                        <option>5</option>
+                    </select>
+            </td>
+            <td>
+                <select class="stopbit" id="com7_stopbit" >
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+            </td>
+            <td>
+                <input type="text" value="not use" id="com7_msgtype" class="msgtype"  />
+            </td>
+            <td>
+                <input type="checkbox" id="com7_checked" class="isused" onclick="onCheckedChanged('com7')" />
+            </td>
+        </tr>
+        <!--COM8元素-->
+        <tr class="odd_line" id="com8_line" isDisable="0">
+            <th class="comnumber">COM8</th>
+            <td>
+                <select class="baud" id="com8_baud" style="text-align:center;" >
+                            <option>2400</option>
+                            <option>4800</option>
+                            <option>9600</option>
+                            <option>19200</option>
+                            <option>38400</option>
+                            <option>57600</option>
+                            <option>115200</option>
+                        </select>
+            </td>
+            <td>
+                <select class="parity" id="com8_parity" >
+                            <option>none</option>
+                            <option>even</option>
+                            <option>odd</option>
+                        </select>
+            </td>
+            <td>
+                <select class="databit" id="com8_databit" >
+                            <option>8</option>
+                            <option>7</option>
+                            <option>6</option>
+                            <option>5</option>
+                        </select>
+            </td>
+            <td>
+                <select class="stopbit" id="com8_stopbit" >
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+            </td>
+
+            <td>
+                <input type="text" value="not use" id="com8_msgtype" class="msgtype"  />
+            </td>
+            <td>
+                <input type="checkbox" id="com8_checked" class="isused" onclick="onCheckedChanged('com8')" />
+            </td>
+        </tr>
+
+    </table>
+
+    <div id="btn_form">
+        <br>
+        <input type="button" id="check" value="查询配置" onclick="onCheckBtnClicked()" />
+        <input type="button" id="update" value="更新配置" onclick="onUpdateBtnClicked()" />
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<netitem netname="eth0">
+		<localIP>192.168.1.10</localIP>
+		<localMask>255.255.255.0</localMask>
+		<MultiCastIP>224.0.0.1</MultiCastIP>
+		<MultiCastPort>6000</MultiCastPort>
+	</netitem>
+	<netitem netname="eth1">
+		<localIP>10.0.0.3</localIP>
+		<localMask>255.0.0.0</localMask>
+		<MultiCastIP>224.1.0.1</MultiCastIP>
+		<MultiCastPort>5000</MultiCastPort>
+	</netitem>
+	<serialport portname="com1">
+		<baudrate>2400</baudrate>
+		<parity>none</parity>
+		<databit>8</databit>
+		<stopbit>1</stopbit>
+		<msgtype>not use</msgtype>
+		<portenable>true</portenable>
+	</serialport>
+	<serialport portname="com2">
+		<baudrate>2400</baudrate>
+		<parity>none</parity>
+		<databit>8</databit>
+		<stopbit>1</stopbit>
+		<msgtype>not use</msgtype>
+		<portenable>true</portenable>
+	</serialport>
+	<serialport portname="com3">
+		<baudrate>2400</baudrate>
+		<parity>none</parity>
+		<databit>8</databit>
+		<stopbit>1</stopbit>
+		<msgtype>not use</msgtype>
+		<portenable>true</portenable>
+	</serialport>
+	<serialport portname="com4">
+		<baudrate>2400</baudrate>
+		<parity>none</parity>
+		<databit>8</databit>
+		<stopbit>1</stopbit>
+		<msgtype>not use</msgtype>
+		<portenable>true</portenable>
+	</serialport>
+	<serialport portname="com5">
+		<baudrate>2400</baudrate>
+		<parity>none</parity>
+		<databit>8</databit>
+		<stopbit>1</stopbit>
+		<msgtype>not use</msgtype>
+		<portenable>true</portenable>
+	</serialport>
+	<serialport portname="com6">
+		<baudrate>2400</baudrate>
+		<parity>none</parity>
+		<databit>8</databit>
+		<stopbit>1</stopbit>
+		<msgtype>not use</msgtype>
+		<portenable>true</portenable>
+	</serialport>
+	<serialport portname="com7">
+		<baudrate>2400</baudrate>
+		<parity>none</parity>
+		<databit>8</databit>
+		<stopbit>1</stopbit>
+		<msgtype>not use</msgtype>
+		<portenable>true</portenable>
+	</serialport>
+	<serialport portname="com8">
+		<baudrate>2400</baudrate>
+		<parity>none</parity>
+		<databit>8</databit>
+		<stopbit>1</stopbit>
+		<msgtype>not use</msgtype>
+		<portenable>true</portenable>
+	</serialport>
+</config>

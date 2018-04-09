@@ -1,0 +1,165 @@
+h2 {
+    font-family: Courier New, Courier, monospace;
+    text-align: center;
+    color: green;
+}
+
+
+/* 标题栏样式设置 */
+
+#nettable,
+#porttable {
+    border-collapse: collapse;
+    width: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+    caption-side: top;
+}
+
+#portcfg,
+#netcfg {
+    color: green;
+}
+
+#porttable th,
+#porttable td,
+#nettable th,
+#nettable td {
+    border: 1px solid rgb(61, 179, 86);
+    font-size: 1em;
+    text-align: center;
+    padding: 0;
+}
+
+.comnumber {
+    font: bolder;
+}
+
+.baud,
+.parity,
+.databit,
+.stopbit {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    padding-left: 10px;
+    margin: 0;
+    border: 0;
+    border: 0px;
+    outline: 0;
+    /* 去掉选中时，文本域周围的绿色框 */
+}
+/*
+.baud:disabled,
+.parity:disabled,
+.databit:disabled,
+.stopbit:disabled,
+.msgtype:disabled {
+    background-color: rgb(209, 228, 215); 
+}
+*/
+
+/* 设置标签不可用时的背景色 */
+
+.msgtype,
+.ipaddress,
+.portaddress {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+
+/* 信息类型文本框配置 */
+
+select {
+    height: 100%;
+}
+
+option {
+    height: 100%;
+    text-align: center;
+}
+
+.table_header {
+    background-color: rgb(14, 90, 30);
+    color: white;
+    height: 30px;
+}
+
+
+/* 设置表头背景色和高度 */
+
+tr.eve_line th {
+    background-color: rgb(24, 219, 50);
+    height: 30px;
+}
+
+
+/* 设置奇数行背景色 */
+
+tr.odd_line th {
+    background-color: rgb(155, 219, 164);
+    height: 30px;
+}
+
+
+/* 设置偶数行背景色 */
+/*
+#com1_line[isDisable='0'],
+#com2_line[isDisable='0'],
+#com3_line[isDisable='0'],
+#com4_line[isDisable='0'],
+#com5_line[isDisable='0'],
+#com6_line[isDisable='0'],
+#com7_line[isDisable='0'],
+#com8_line[isDisable='0'] {
+    background-color: rgb(209, 228, 215);
+}
+*/
+
+/* 设置列表行在不可用时的背景色 */
+
+option {
+    background-color: rgb(83, 175, 83);
+}
+
+
+/* 设置多选框中下拉列表的背景色 */
+
+#btn_form {
+    position: fixed;
+    right: 20%;
+}
+
+
+/* 设置按钮位置 */
+
+#update,
+#check {
+    width: 100px;
+    height: 24px;
+    border-radius: 3px;
+}
+
+
+/* 设置按钮的样式 */
+
+.isused {
+    height: 20px;
+    width: 25px;
+}
+
+
+/* 设置选择框的大小 */
+
+#debuginfo {
+    text-align: center;
+}

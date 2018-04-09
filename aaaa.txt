@@ -1,0 +1,14 @@
+eth0/192.168.1.123/255.255.255.0/223.1.0.15/8080%eth1/10.0.0.3/255.0.0.0/224.1.0.1/4020%com1/2400/none/8/1/not use/false%com2/4800/none/8/1/not use/false%com3/9600/none/8/1/not use/false%com4/19200/none/8/1/not use/true%com5/38400/none/8/1/not use/true%com6/57600/none/8/1/not use/true%com7/115200/none/8/1/not use/true%com8/19200/none/8/1/not use/true%
+eth0/192.168.1.123/255.255.255.0/223.1.0.15/8080
+eth1/10.0.0.3/255.0.0.0/224.1.0.1/4020
+com1/2400/none/8/1/not use/false
+com2/4800/none/8/1/not use/false
+com3/9600/none/8/1/not use/false
+com4/19200/none/8/1/not use/true
+com5/38400/none/8/1/not use/true
+com6/57600/none/8/1/not use/true
+com7/115200/none/8/1/not use/true
+com8/19200/none/8/1/not use/true
+
+array_net1 = netname=>eth0  localIP=>192.168.1.123  localMask=>255.255.255.0  MultiCastIP=>223.1.0.15  MultiCastPort=>8080  
+array_net2 = netname=>eth1  localIP=>10.0.0.3  localMask=>255.0.0.0  MultiCastIP=>224.1.0.1  MultiCastPort=>4020  
