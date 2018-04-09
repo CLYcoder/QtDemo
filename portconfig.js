@@ -89,12 +89,7 @@ function onUpdateBtnClicked() {
         //IE6, IE5 浏览器执行的代码
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    /*
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
-        }
-    }*/
+    
     xmlhttp.open("GET", "welcome.php?str=" + str, true);
     xmlhttp.send();
     console.log("script worked");
@@ -116,26 +111,7 @@ function onCheckedChanged(str) {
     var line_id = str + "_line";
 
     var flag = document.getElementById(checked_id).checked;
-/*
-    if (flag == true) {
-        // 设定行元素是否可选以及背景色 
-        document.getElementById(baud_id).disabled = false;
-        document.getElementById(parity_id).disabled = false;
-        document.getElementById(data_id).disabled = false;
-        document.getElementById(stop_id).disabled = false;
-        document.getElementById(type_id).disabled = false;
-        document.getElementById(line_id).setAttribute("isDisable", "1");
-        document.getElementById(line_id).attributes['isDisable'].nodeValue = '1';
-    } else {
-        document.getElementById(baud_id).disabled = true;
-        document.getElementById(parity_id).disabled = true;
-        document.getElementById(data_id).disabled = true;
-        document.getElementById(stop_id).disabled = true;
-        document.getElementById(type_id).disabled = true;
-        document.getElementById(line_id).setAttribute("isDisable", "1");
-        document.getElementById(line_id).attributes['isDisable'].nodeValue = '0';
-    }
-    */
+
 }
 
 /**
